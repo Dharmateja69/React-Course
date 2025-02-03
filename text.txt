@@ -1,0 +1,10 @@
+React is a free and
+open source JavaScript
+library specifically designed for building
+user interfaces (Uls).
+— React Official Site.
+=========================================================
+Developed By Facebook 2011
+Use Components Model
+Build Modular Apps
+Learn Once, Write Anywhere
