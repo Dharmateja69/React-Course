@@ -1,14 +1,14 @@
 import React from "react";
-import Greetinf from "./Assignment/Greetinf";
-import Userstatus from "./Assignment/Userstatus";
-import Weather from "./Assignment/Weather";
 
 export default function App() {
+  const styles = {
+    color: "red",
+    backgroundColor: "teal",
+    padding: "2rem",
+  };
   return (
     <div>
-      <Weather temp="25" />
-      <Userstatus loggedin={true} isadmin={true} />
-      <Greetinf timeofDay="a" />
+      <h1 style={styles}>Inline Style</h1>
     </div>
   );
 }
