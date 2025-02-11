@@ -1,26 +1,18 @@
-import React from "react";
-
-const Copy = () => {
-  const handleCopy = () => {
-    console.log("stop ");
-  };
-
-  return (
-    <h1>
-      <p onCopy={handleCopy}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit aperiam
-        pariatur quas quasi porro in exercitationem placeat modi qui officia,
-        error veritatis ipsa fugit dicta, optio sapiente facere assumenda
-        accusantium.
-      </p>
-    </h1>
-  );
-};
+import React, { useState } from "react";
 
 export default function App() {
+  const [count, setcount] = useState(0);
+  const increment = () => {
+    setcount(count + 1);
+  };
+  const decrement = () => {
+    setcount(count - 1);
+  };
   return (
     <div>
-      <Copy />
+      <h1>{count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </div>
   );
 }
