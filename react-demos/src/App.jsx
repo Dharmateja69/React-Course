@@ -1,13 +1,18 @@
 import React from "react";
 
-const Button = () => {
-  const handleclick = () => {
-    console.log("click me ", Math.round(Math.random() * 10));
+const Copy = () => {
+  const handleCopy = () => {
+    console.log("stop ");
   };
 
   return (
     <h1>
-      <button onClick={handleclick}>Click</button>
+      <p onCopy={handleCopy}>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit aperiam
+        pariatur quas quasi porro in exercitationem placeat modi qui officia,
+        error veritatis ipsa fugit dicta, optio sapiente facere assumenda
+        accusantium.
+      </p>
     </h1>
   );
 };
@@ -15,7 +20,7 @@ const Button = () => {
 export default function App() {
   return (
     <div>
-      <Button />
+      <Copy />
     </div>
   );
 }
