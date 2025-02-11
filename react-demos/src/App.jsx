@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 
 export default function App() {
-  const [frined, setfriend] = useState(["sdhu", "sjfkd"]);
-  const addfriend = () => {
-    setfriend([...frined, "dharmateja"]); //at first we have to copy the existing data using the restoperator ...name,
+  const [obj, setobj] = useState({
+    name: "sidhu",
+    age: 23,
+  });
+
+  const handle = () => {
+    setobj({ ...obj, age: 58 }); //before we will change the data we have to copy it useing the ...restoperator
   };
-  const remove = () => {
-    setfriend([...frined]);
-  };
+
   return (
     <div>
-      {frined.map((item) => (
-        <li key={Math.random()}>{item}</li>
-      ))}
-      <button onClick={addfriend}>Add more friends</button>
-      <button onClick={remove}>Remove the friend</button>
+      <h1>{obj.age}</h1>
+      <h1>{obj.name}</h1>
+      <button onClick={handle}>Click me</button>
     </div>
   );
 }
-// like wise we can add different types of methods like update, delete, etc....
