@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 
 export default function App() {
-  const [count, setcount] = useState(0);
-  const increment = () => {
-    setcount(count + 1);
+  const [frined, setfriend] = useState(["sdhu", "sjfkd"]);
+  const addfriend = () => {
+    setfriend([...frined, "dharmateja"]); //at first we have to copy the existing data using the restoperator ...name,
   };
-  const decrement = () => {
-    setcount(count - 1);
+  const remove = () => {
+    setfriend([...frined]);
   };
   return (
     <div>
-      <h1>{count}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      {frined.map((item) => (
+        <li key={Math.random()}>{item}</li>
+      ))}
+      <button onClick={addfriend}>Add more friends</button>
+      <button onClick={remove}>Remove the friend</button>
     </div>
   );
 }
+// like wise we can add different types of methods like update, delete, etc....
