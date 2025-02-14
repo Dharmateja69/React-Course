@@ -1,16 +1,14 @@
 import React from "react";
-import Profile from "./Assignment/Profile";
-import ShoppingList from "./Assignment/ShoppingList";
-import Todoustate from "./Assignment/Todoustate";
-import UStatecounter from "./Assignment/UStatecounter";
+import CopyInput from "./Components/CopyInput";
 
 export default function App() {
   return (
     <div>
-      <UStatecounter />
+      {/* <UStatecounter />
       <Todoustate />
       <Profile />
-      <ShoppingList />
+      <ShoppingList /> */}
+      <CopyInput />
     </div>
   );
 }
