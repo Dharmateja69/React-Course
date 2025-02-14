@@ -1,5 +1,6 @@
 import React from "react";
 import CopyInput from "./Components/CopyInput";
+import Switchcahr from "./Components/Switchcahr";
 
 export default function App() {
   return (
@@ -8,7 +9,8 @@ export default function App() {
       <Todoustate />
       <Profile />
       <ShoppingList /> */}
-      <CopyInput />
+      {/* <CopyInput /> */}
+      <Switchcahr />
     </div>
   );
 }
