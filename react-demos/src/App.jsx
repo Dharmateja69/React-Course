@@ -1,13 +1,15 @@
 import React from "react";
-import UseEffect from "./Assignment/UseEffect";
-import BasicEffect from "./Assignment/BasicEffect";
-import FetchDataEffect from "./Assignment/FetchDataEffect";
+import ComponentA from "./Components/ComponentA";
+import ComponentB from "./Components/ComponentB";
+import ComponentC from "./Components/ComponentC";
 
 export default function App() {
+  const name = "sidhu";
   return (
     <div>
-      {/* <BasicEffect /> */}
-      <FetchDataEffect />
+      <ComponentA name={name} />
+      <ComponentB name={name} />
+      <ComponentC name={name} />
     </div>
   );
 }
