@@ -1,15 +1,16 @@
-import React from "react";
+import React, { createContext } from "react";
 import ComponentA from "./Components/ComponentA";
-import ComponentB from "./Components/ComponentB";
-import ComponentC from "./Components/ComponentC";
+
+export const Data = createContext();
 
 export default function App() {
   const name = "sidhu";
+
   return (
     <div>
-      <ComponentA name={name} />
-      <ComponentB name={name} />
-      <ComponentC name={name} />
+      <Data.Provider value={name}>
+        <ComponentA />
+      </Data.Provider>
     </div>
   );
 }

@@ -1,9 +1,14 @@
 import React from "react";
+import { Data } from "../App";
 
-const ComponentC = ({ name }) => {
+const ComponentC = () => {
   return (
     <div>
-      <h3>ComponentC:${name}</h3>
+      <Data.Consumer>
+        {(name) => {
+          return <h1>{name}</h1>;
+        }}
+      </Data.Consumer>
     </div>
   );
 };
