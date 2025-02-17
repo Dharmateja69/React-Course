@@ -1,20 +1,17 @@
-import React, { createContext } from "react";
-import ComponentA from "./Components/ComponentA";
-
-export const Data = createContext();
-export const Data1 = createContext();
+import React from "react";
+import UserProfile from "./Assignment/UserProfile";
+import { UserProvider } from "./Assignment/UserProvider";
 
 export default function App() {
-  const name = "sidhu";
-  const age = 22;
-
   return (
     <div>
-      <Data.Provider value={name}>
-        <Data1.Provider value={age}>
-          <ComponentA />
-        </Data1.Provider>
-      </Data.Provider>
+      <UserProvider>
+        <UserProfile />
+      </UserProvider>
     </div>
   );
 }
+
+// The App component renders a <div>.
+// Inside <div>, UserProvider is wrapped around UserProfile.
+// This means UserProfile now has access to UserProvider's context.
