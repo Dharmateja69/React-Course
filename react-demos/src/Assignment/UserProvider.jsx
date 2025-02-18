@@ -3,10 +3,10 @@ import React, { createContext, useState } from "react";
 const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({ name: "Jhon Doe" });
+  const [user, setUser] = useState({ name: "Jhon Doe", age: 23 });
 
-  const updateUser = (newName) => {
-    setUser({ name: newName });
+  const updateUser = (newName, newage) => {
+    setUser({ name: newName, age: newage });
   };
 
   return (

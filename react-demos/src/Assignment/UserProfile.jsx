@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
+import { ColorContext } from "./ColorProvider";
 import { UserContext } from "./UserProvider";
 
 const UserProfile = () => {
   const { user } = useContext(UserContext);
+  const { color } = useContext(ColorContext);
 
   return (
     <div>
       <h1>User Profile</h1>
-      <p>Name: {user.name}</p>
+      <p style={{ color: color }}>Name: {user.name}</p>
     </div>
   );
 };

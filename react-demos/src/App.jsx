@@ -1,12 +1,17 @@
 import React from "react";
+import { ColorProvider } from "./Assignment/ColorProvider"; // Fixed import
 import UserProfile from "./Assignment/UserProfile";
 import { UserProvider } from "./Assignment/UserProvider";
+import Userdata from "./Assignment/Userdata";
 
 export default function App() {
   return (
     <div>
       <UserProvider>
-        <UserProfile />
+        <ColorProvider>
+          <UserProfile />
+          <Userdata />
+        </ColorProvider>
       </UserProvider>
     </div>
   );
