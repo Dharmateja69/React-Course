@@ -1,10 +1,10 @@
 import React from "react";
-import Counter from "./Assignment/Counter";
+import Themetoggler from "./Assignment/Themetoggler";
 
 export default function App() {
   return (
     <div>
-      <Counter />
+      <Themetoggler />
     </div>
   );
 }
