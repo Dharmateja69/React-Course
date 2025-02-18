@@ -1,22 +1,27 @@
-import React from "react";
-import { ColorProvider } from "./Assignment/ColorProvider"; // Fixed import
-import UserProfile from "./Assignment/UserProfile";
-import { UserProvider } from "./Assignment/UserProvider";
-import Userdata from "./Assignment/Userdata";
+import React, { useReducer } from "react";
+const initialState = { count: 0 };
+//reducer has state of the variable, where action is used to what we have to do with that vairable
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { ...state, count: state.count + 1 };
+    case "decrement":
+      return { ...state, count: state.count - 1 };
+    case "reset":
+      return { ...state, count: 0 };
+    default:
+      return state;
+  }
+};
 
 export default function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
-      <UserProvider>
-        <ColorProvider>
-          <UserProfile />
-          <Userdata />
-        </ColorProvider>
-      </UserProvider>
+      <h1>Count:{state.count}</h1>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
     </div>
   );
 }
-
-// The App component renders a <div>.
-// Inside <div>, UserProvider is wrapped around UserProfile.
-// This means UserProfile now has access to UserProvider's context.
