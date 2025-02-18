@@ -5,8 +5,8 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({ name: "Jhon Doe", age: 23 });
 
-  const updateUser = (newName) => {
-    setUser((p) => ({ ...p, name: newName })); //copying the previouse data
+  const updateUser = (newName, newage) => {
+    setUser({ name: newName, age: newage }); //copying the previouse data
   };
 
   return (
