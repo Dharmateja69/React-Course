@@ -1,10 +1,10 @@
 import React from "react";
-import Themetoggler from "./Assignment/Themetoggler";
+import Todolistreducer from "./Assignment/Todolistreducer";
 
 export default function App() {
   return (
     <div>
-      <Themetoggler />
+      <Todolistreducer />
     </div>
   );
 }
