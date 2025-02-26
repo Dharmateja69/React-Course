@@ -1,10 +1,102 @@
-React is a free and
-open source JavaScript
-library specifically designed for building
-user interfaces (Uls).
+React is a free and open source JavaScript library specifically designed for building user   interfaces (Uls).
 — React Official Site.
 =========================================================
 Developed By Facebook 2011
 Use Components Model
 Build Modular Apps
 Learn Once, Write Anywhere
+=========================================================
+React is the most popular , powerful front-end libarary develped and sponsored by Facebook.
+============================================================
+Components Model
+=============
+A component is a peace of the Ul that has it's
+own logic and appearance. A component can
+be small as a button or large as entire page.
+===========================================================
+
+C:\Users\Devakoti.Dharma Teja\OneDrive\Desktop\React-course\React>npm create vite@latest
+Need to install the following packages:
+create-vite@6.1.1
+Ok to proceed? (y) y
+√ Project name: ... react-demos
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+
+Scaffolding project in C:\Users\Devakoti.Dharma Teja\OneDrive\Desktop\React-course\React\react-demos...
+
+Done. Now run:
+
+  cd react-demos
+  npm install
+  npm run dev
+
+
+C:\Users\Devakoti.Dharma Teja\OneDrive\Desktop\React-course\React>cd react-demos
+
+C:\Users\Devakoti.Dharma Teja\OneDrive\Desktop\React-course\React\react-demos>npm i
+==========================================================
+
+=============================================================
+onst myname = "Huxn WebDev";
+  const mul = (a, b) => a * b;
+  const specialclass = "simple-class";
+app.js ->things ->{ {/* <Header />
+      <Maincomponent />
+      <Footer /> */}
+      {/* <Welcomessage /> */}
+      {/* <JSXRule /> */}
+      <p>2+2</p>
+      <p>{2 + 2}</p>
+      <p>{myname}</p>
+      <p>My frind list ={[myname, "msd", "dsfdsf"]}</p>
+      <p>2*2={mul(2, 2)}</p>
+      <h1 className={specialclass}>This the specialclass</h1>}
+      =======================================================
+===============================================================
+ // const userInfo = [
+  //   {
+  //     name: "Alice",
+  //     age: 25,
+  //     year: 1999,
+  //     salary: 50000,
+  //   },
+  //   {
+  //     name: "Bob",
+  //     age: 30,
+  //     year: 1994,
+  //     salary: 60000,
+  //   },
+  //   {
+  //     name: "Charlie",
+  //     age: 28,
+  //     year: 1996,
+  //     salary: 55000,
+  //   },
+  // ];
+  =======
+   {num.map((number) => (
+        // <ul>//App.jsx:6 Warning: Each child in a list should have a unique "key" prop.
+        <ul key={number}>
+          <li>{number}</li>
+        </ul>
+      ))}
+
+      {userInfo.map(
+        (
+          items //here we will use only ( ) after the call back function use {}
+        ) => (
+          <ul key={Math.random()}>
+            {/* //here the key will be its own value only. */}
+            <li> name:{items.name}</li>
+            <li>age:{items.age}</li>
+            <li>year:{items.year}</li>
+            <li>salary:{items.salary}</li>
+          </ul>
+        )
+      )}
+=================================================================
+<Propes name="sidhu" age="19" work="student" />
+      {/* //as we are passsing the props like name,age work to the class Propes from
+      the parent class to child class(Proper). */}
+===================================================================      
