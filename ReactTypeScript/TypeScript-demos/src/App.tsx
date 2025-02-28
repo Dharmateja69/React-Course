@@ -3,7 +3,9 @@ import User from "./Components/User";
 function App() {
   return (
     <div>
-      <User name="alex" age={20} isStudent={true} />
+      <User>
+        <h2>hello This is bascs of typeScript</h2>
+      </User>
     </div>
   );
 }
