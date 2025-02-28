@@ -1,9 +1,13 @@
-import User from "./Components/User";
+import Button from "./Assignment/Button";
 
 function App() {
   return (
     <div>
-      <User age={23} name="sidhu" />
+      <Button
+        label="Click"
+        onClick={() => console.log("Clicked")}
+        disabled={false}
+      />
     </div>
   );
 }
