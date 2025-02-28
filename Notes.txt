@@ -1,0 +1,189 @@
+Components(the Components name should be Capital letter ) and return html only
+Components are independent & reusable bits of
+code. They serve the same purpose as JS functions,
+but work in isolation and return HTML.
+======================================================>
+In a component we are allowed to return only one div.
+======================================================>
+{ Expressions In JSX }
+With JSX you can write expressions inside curly
+braces. The expressions can be a React variable, or
+property, or any other valid JavaScript expression.
+JSX will execute the expression and return the result.
+===============>===================================>
+LISTS
+In React, you will render lists with some type
+of loop. The JavaScript map() array method
+is generally the preferred method.
+------------------------------------------------->
+PROPS
+. Props / Properties are arguments passed
+into React components.
+. Props allows us to pass data from parent
+component to a child component
+.Props are  passedto components via HTML
+attributes.
+====================================================
+CONDITIONAL RENDERING
+Conditional rendering allows us to dynamically display different
+UI components or content based on specific conditions. This
+enables us to create more interactive and responsive user
+experiences
+======================================================
+STATE
+State is a way to store and manage data that can change over
+time and affects how the component renders. We define state
+using the useState Hook, which allows you to set an initial
+value and provides a way to update that state.
+
+HOOKS
+Hooks are a new addition in React 16.8
+They let you use state and other React features
+without writing a class.
+
+useState()
+useState Hook allows us to track state in a
+functional component. State generally refers
+to data or properties that need to be
+tracking in an application.
+
+syntax:const[data, changeData] = useState()
+        initial value,change value
+===================================================================
+Portal
+Portal is a feature that allows you to render a child
+component into a DOM node that exists outside the
+hierarchy of the parent component. This can be useful for
+scenarios like modals, tooltips, or dropdowns, where you
+want to break out of the usual parent-child structure and
+render in a different part of the DOM. 
+=====================================================================     
+useEffect()
+useEffect Hook allows you to perform side effects in
+your components. Some examples of side effects
+are: fetching data, directly updating the DOM etc.
+useEffect(()=>{
+
+})
+1.without the array -> an every single render
+
+// xxxx Conditional statement we cannot use like this 
+if(value>0)
+{
+        useEffect(()=>{
+                console.log("call useEffect);
+                document.title =`Increment (${value}) `;
+        })
+}
+
+//right way 
+useEffect(()=>{
+        console.log("call useEffect);
+        if(value>0){
+        document.title =`Increment (${value}) `;
+} ,[value] }
+=========================================================================
+What is Prop Drilling
+app->header and card.(header->nav,card->users->date,time)
+
+let suppose we have dasta in app (data) we want to pass the data from card->useres->date(here we want to use the data) 
+so for this purpose we pass the data in the form of props to all the component from top to bottom here by we call it as prop Drilling
+===========================================================================
+props in actions:it is slow process where in every componet we have to  import to overcome this we use context api .
+===========================================================================
+What is Context API ?
+Context API is a feature that allows you to manage and
+share state across your component tree without having to
+pass props down manually at every level. It's useful for
+scenarios where you need to share data or functions
+across many components, especially when these
+components are deeply nested.
+==============================================================================
+App.js
+export const Data = createContext();
+export const Data1 = createContext();
+
+export default function App() {
+  const name = "sidhu";
+  const age = 22;
+
+  return (
+    <div>
+      <Data.Provider value={name}>
+        <Data1.Provider value={age}>
+          <ComponentA />
+        </Data1.Provider>
+      </Data.Provider>
+    </div>
+  );
+}
+
+In action context api:
+ <div>
+      <Data.Consumer>
+        {(name) => {
+          // return <h1>{name}</h1>;
+          return (
+            <Data1.Consumer>
+              {(age) => {
+                return (
+                  <h1>
+                    My name is {name} and my age is {age}
+                  </h1>
+                );
+              }}
+            </Data1.Consumer>
+          );
+        }}
+      </Data.Consumer>
+    </div>
+=================================================================================
+What is useContext Hook ?    
+useContext()
+useContext Hook allows us to access the context values
+provided by a Context object directly within a functional
+component. Context provides a way to pass data through
+the component tree without having to pass props down
+manually at every level.
+================================================================================
+useContext Challenge ?
+================================================================================ 
+What is useReducer ?
+
+useReducer(): Is a React hook used for state management,acting as an alternative to useState for complex state logic.
+It takes a reducer function and an initial state, returning the current state and a dispatch function to update it.
+This is useful when state updates depend on previous state values or involve multiple actions. 🚀
+
+const [state, dispatch] = useReducer(reducerFunction, initialState);
+
+reducerFunction: A function that takes state and action, then returns a new state.
+initialState: The initial value of the state.
+state: The current state value.
+dispatch: A function to send actions to the reducer to update the state.
+==================================================================
+useRef
+useRef Hook provides a way to access and
+interact with DOM elements or to persist values
+across renders without causing a re-render.
+
+const refVariable = useRef(initialValue);
+
+initialValue: The initial value of the ref.
+refVariable.current: Holds the reference value.
+
+======================================================================
+Custom Hooks In Action ?
+
+Custom Hooks are JavaScript functions that start with the
+prefix use (e.g., useFetch, useForm) and can call other
+hooks within them. They allow you to extract and reuse
+logic that involves state or side effects, making your
+components more readable and maintainable.
+
+here  we will create our hook and export that hook any number of times to any number to coponents to use .
+========================================================================
+useld:
+=====
+The useld hook in React is used to generate
+unique IDs for components.
+=========================================================================
