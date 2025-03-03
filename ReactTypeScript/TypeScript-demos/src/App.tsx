@@ -1,17 +1,13 @@
-import { useState } from "react";
-import Userprofile from "./Components/Userprofile";
-import TodoList from "./Components/TodoList";
+import ContactForm from "./Components/ContactForm";
+import FocusInput from "./Components/FocusInput";
+import Form from "./Components/Form";
 
 function App() {
-  const [user, setuser] = useState<Object>({
-    name: "Jack",
-    age: 25,
-  });
-
   return (
     <div>
-      <Userprofile user={user} />
-      <TodoList />
+      <Form />
+      <FocusInput />
+      <ContactForm />
     </div>
   );
 }
