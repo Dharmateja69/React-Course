@@ -1,23 +1,17 @@
-import AdminInfo from "./Assignment/AdminInfo";
-import { AdminInfoList, Info } from "./Assignment/Types";
-import UserInfo from "./Assignment/UserInfo";
+import { useState } from "react";
+import Userprofile from "./Components/Userprofile";
+import TodoList from "./Components/TodoList";
+
 function App() {
-  const user: Info = {
-    id: 1,
-    name: "John",
-    email: "jhon@gmail.com",
-  };
-  const Admin: AdminInfoList = {
-    id: 2,
-    name: "JohnAdmin",
-    email: "jhonAdmin@gmail.com",
-    role: "Admin",
-    lastlogin: new Date(),
-  };
+  const [user, setuser] = useState<Object>({
+    name: "Jack",
+    age: 25,
+  });
+
   return (
     <div>
-      <AdminInfo Admin={Admin} />
-      <UserInfo user={user} />
+      <Userprofile user={user} />
+      <TodoList />
     </div>
   );
 }
