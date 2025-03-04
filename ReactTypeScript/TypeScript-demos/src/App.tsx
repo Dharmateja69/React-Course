@@ -1,13 +1,9 @@
-import ContactForm from "./Components/ContactForm";
-import FocusInput from "./Components/FocusInput";
-import Form from "./Components/Form";
+import Counter from "./Components/ContextApi/Counter";
 
 function App() {
   return (
     <div>
-      <Form />
-      <FocusInput />
-      <ContactForm />
+      <Counter />
     </div>
   );
 }
