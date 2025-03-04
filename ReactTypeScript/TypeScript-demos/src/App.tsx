@@ -1,12 +1,9 @@
-import Counter from "./Components/ContextApi/Counter";
-import MyProvider from "./Components/ContextApi/MyContext";
+import Counter from "./Components/Usereducer/Counter";
 
 function App() {
   return (
     <div>
-      <MyProvider>
-        <Counter />
-      </MyProvider>
+      <Counter />
     </div>
   );
 }
