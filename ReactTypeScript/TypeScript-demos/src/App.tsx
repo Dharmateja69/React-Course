@@ -1,9 +1,12 @@
 import Counter from "./Components/ContextApi/Counter";
+import MyProvider from "./Components/ContextApi/MyContext";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <MyProvider>
+        <Counter />
+      </MyProvider>
     </div>
   );
 }

@@ -1,14 +1,14 @@
 import { FC, useContext } from "react";
-import { MyContext } from "./MyContext";
+import { MyContext } from "../ContextApi/MyContext";
 
 const Counter: FC = () => {
-  const { count, increment, decrement, reset } = useContext(MyContext);
+  const { count, increment, decrement } = useContext(MyContext);
+
   return (
     <div>
-      <h2>counter:{count}</h2>
-      <button onClick={increment}>increment</button>
-      <button onClick={decrement}>decrement</button>
-      <button onClick={reset}>reset</button>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
     </div>
   );
 };
