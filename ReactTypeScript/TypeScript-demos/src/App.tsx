@@ -1,9 +1,9 @@
-import Counter from "./Components/Usereducer/Counter";
+import Fetchdata from "./Components/UseEffect/Fetchdata";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <Fetchdata />
     </div>
   );
 }
