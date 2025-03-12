@@ -1,9 +1,9 @@
-import Counter from "./Components/ContextApi/Counter";
+import Fetchdata from "./Components/UseEffect/Fetchdata";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <Fetchdata />
     </div>
   );
 }
