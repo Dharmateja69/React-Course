@@ -1,11 +1,3 @@
-import Fetchdata from "./Components/UseEffect/Fetchdata";
-
-function App() {
-  return (
-    <div>
-      <Fetchdata />
-    </div>
-  );
+export default function App() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
 }
-
-export default App;
